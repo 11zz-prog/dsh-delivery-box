@@ -1,0 +1,4 @@
+# 取件箱：Host 读「取件箱」目录（默认 用户主目录\取件箱，可用 inbox.config.json / DSH_INBOX_DIR 覆盖） + Client 侧栏面板
+- insert:
+    - id: dsh-delivery-box
+      name: dsh-delivery-box

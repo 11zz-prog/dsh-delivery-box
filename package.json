@@ -1,0 +1,57 @@
+{
+  "name": "dsh-delivery-box",
+  "version": "1.0.0",
+  "description": "Delivery Box (取件箱) for DeepSeek Harness: one folder where every deliverable lands, a sidebar panel grouped by project and by the conversation that produced it, inline preview, one-click copy to the clipboard (paste into WeChat), reveal in Explorer, delete to Recycle Bin.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "inbox",
+    "deliverables",
+    "clipboard",
+    "file-preview",
+    "sidebar",
+    "windows"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11zz-prog/dsh-delivery-box.git"
+  },
+  "homepage": "https://github.com/11zz-prog/dsh-delivery-box#readme",
+  "bugs": {
+    "url": "https://github.com/11zz-prog/dsh-delivery-box/issues"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

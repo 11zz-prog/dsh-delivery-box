@@ -1,0 +1,10 @@
+node_modules/
+dist/
+inbox.config.json
+tools/投递.cmd
+tools/建桌面快捷方式.cmd
+*.bak-*
+*.bak
+.DS_Store
+Thumbs.db
+*.log
